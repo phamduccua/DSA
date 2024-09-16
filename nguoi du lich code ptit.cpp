@@ -21,19 +21,23 @@ int c_min = INT_MAX;
 		}
 	}
 	int main(){
-		cin >> n;
-		for(int i = 1;i<=n;i++){
-			for(int j = 1;j<=n;j++){
-				cin >> a[i][j];
-				if(a[i][j] != 0){
-					c_min = min(c_min,a[i][j]);
+		int t; cin >> t;
+		while(t--){
+			cin >> n;
+			for(int i = 1;i<=n;i++){
+				for(int j = 1;j<=n;j++){
+					cin >> a[i][j];
+					if(a[i][j] != 0){
+						c_min = min(c_min,a[i][j]);
+					}
+					
 				}
-				
 			}
+			memset(used,0,sizeof(used));
+			memset(X,0,sizeof(X));
+			X[1] = 1,used[1] = 1;
+			Try(2);
+			cout << kq << endl;
 		}
-		memset(used,0,sizeof(used));
-		memset(X,0,sizeof(X));
-		X[1] = 1,used[1] = 1;
-		Try(2);
-		cout << kq << endl;
+		
 	} 
