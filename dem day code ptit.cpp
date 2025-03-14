@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int MOD = 1e9+7;
+const int MOD = 123456789;
 	long long pow(int x,long long n){
 		if(n == 0) return 1;
 		long long X = pow(x,n/2);
