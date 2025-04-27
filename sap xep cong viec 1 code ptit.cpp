@@ -22,7 +22,7 @@ using namespace std;
 			int kt = v[0].second;
 			int cnt = 1;
 			for(int i = 1;i<n;i++){
-				if(v[i].first > kt){
+				if(v[i].first >= kt){
 					cnt++;
 					kt = v[i].second;
 				}
